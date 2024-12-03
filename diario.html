@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Life</title>
+    <link href="https://fonts.googleapis.com/css2?family=Agrandir:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/diario.css">
+   
+
+</head>
+<body>
+    <div class="container">
+        <header>
+          <img class="logo" src="logo2-Photoroom.png" alt="">
+
+            
+            <nav>
+
+                <div class="hamburger" id="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+
+
+                
+                <ul class="menu" id="menu">
+                    <li><a href="diario.html">DIARIO</a></li>
+                    <li><a href="#">MANIFESTAR</a></li>
+                    <li><a href="#">AGRADECER</a></li>
+                    <li><a href="#">LOGROS</a></li>
+                    <li><a href="#">AGENDA</a></li>
+                </ul>
+
+
+
+            </nav>
+        </header>
+
+       
+            <div id="month-year-picker">
+              <select id="filter-year">
+                <!-- Rellenar dinámicamente -->
+              </select>
+              <select id="filter-month">
+                <option value="01">Enero</option>
+                <option value="02">Febrero</option>
+                <option value="03">Marzo</option>
+                <option value="04">Abril</option>
+                <option value="05">Mayo</option>
+                <option value="06">Junio</option>
+                <option value="07">Julio</option>
+                <option value="08">Agosto</option>
+                <option value="09">Septiembre</option>
+                <option value="10">Octubre</option>
+                <option value="11">Noviembre</option>
+                <option value="12">Diciembre</option>
+              </select>
+
+              <input type="text" id="filter-tags" placeholder="Añade etiquetas...">
+            </div>
+       
+      
+         
+         
+       
+
+       <!-- Notas -->
+       <div class="notes" id="notes">
+
+         <div class="note" data-date="nov2023" data-tags="#diario,#personal">30 Nov 2023 - Nota personal</div>
+
+         <div class="note" data-date="dec2023" data-tags="#trabajo,#proyecto">1 Dic 2023 - Nota de trabajo</div>
+       </div>
+
+       <!-- Editor -->
+       <div class="editor">
+        <!-- Botones B,I, U, preguntas, emojis -->
+        <div class="editor-buttons">
+              <button class="filter-button" onclick="applyStyle('bold')"><b>B</b></button>
+              <button class="filter-button" onclick="applyStyle('italic')"><i>I</i></button>
+              <button class="filter-button" onclick="applyStyle('underline')"><u>U</u></button>
+            </div>
+            <div class="editor-icons">
+              <img class="filter-button" src="pregunta.png" alt="Questions" onclick="showQuestions()">
+              <img class="filter-button" src="emojis.png" alt="Emojis" onclick="showEmojis()">
+            </div>
+
+         <textarea id="note-content" placeholder="Escribe tu nota aquí..."></textarea>
+         <textarea id="etiquetas" placeholder="#Añade etiquetas"></textarea>
+         <button id="save-note">Guardar</button>
+       </div>
+
+    </div>
+
+     <script src="js/script.js"></script>
+    
+</body>
+</html>

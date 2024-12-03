@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Agrandir', 'Montserrat', sans-serif;
+}
+
+body {
+    background: linear-gradient(45deg, #fde3b0, #f6acef);
+        color: #fff;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: transparent;
+    z-index: 10;
+}
+
+.title {
+        font-size: 150px;
+    }
+
+img {
+    width: 80px;
+    height: 80px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Default menu styles for desktop */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* CTA Button */
+.cta-button {
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: white;
+    color: #f6acef;
+}
+
+/* Hamburger Menu Icon */
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu {
+        display: none; /* Hide menu by default on smaller screens */
+        flex-direction: column;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        padding: 10px;
+        width: 150px;
+        text-align: right;
+        background-color: rgba(150, 121, 121, 0.8); /* Fondo de color #967979 con transparencia */
+    }
+
+    .menu.show {
+        display: flex; /* Show menu when the "show" class is toggled */
+    }
+
+    .menu-cerrar{
+        display: none;
+    }
+
+    
+    .hamburger {
+        display: flex; /* Show the hamburger icon */
+    }
+
+    .title {
+        font-size: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 36px;
+    }
+}
